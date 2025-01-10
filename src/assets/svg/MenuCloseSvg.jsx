@@ -1,28 +1,30 @@
-export const MenuSvg = ({ openNavigation }) => {
+const MenuCloseSvg = ({ openNavigation }) => {
   return (
     <svg
       className="overflow-visible"
       width="20"
-      height="12"
-      viewBox="0 0 20 12"
+      height="20"
+      viewBox="0 0 20 20"
     >
       <rect
         className="transition-all origin-center"
-        y={openNavigation ? "5" : "0"}
+        x="0"
+        y="9"
         width="20"
         height="2"
         rx="1"
         fill="white"
-        transform={`rotate(${openNavigation ? "45" : "0"})`}
+        transform={`rotate(${openNavigation ? "45" : "0"}) translate(${openNavigation ? "0, -5" : "0, 0"})`}
       />
       <rect
         className="transition-all origin-center"
-        y={openNavigation ? "5" : "10"}
+        x="0"
+        y="9"
         width="20"
         height="2"
         rx="1"
         fill="white"
-        transform={`rotate(${openNavigation ? "-45" : "0"})`}
+        transform={`rotate(${openNavigation ? "-45" : "0"}) translate(${openNavigation ? "0, 5" : "0, 0"})`}
       />
     </svg>
   );
